@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PATP6-Restaurante</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="user">Digite o usuário</string>
+    <string name="senha">Digite sua senha</string>
+    <string name="login">Login</string>
+    <string name="bemvindo">Bem vindo!</string>
+    <string name="comandas">Comandas</string>
+    <string name="caixa">Caixa</string>
+    <string name="admin">Administrador</string>
+    <string name="sair">Sair</string>
+
+</resources>
