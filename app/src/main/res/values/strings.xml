@@ -6,8 +6,41 @@
     <string name="login">Login</string>
     <string name="bemvindo">Bem vindo!</string>
     <string name="comandas">Comandas</string>
+    <string name="cadastrarcomanda">Cadastrar Comanda</string>
     <string name="caixa">Caixa</string>
     <string name="admin">Administrador</string>
     <string name="sair">Sair</string>
+    <string name="nomecliente">Nome do cliente</string>
+    <string name="telefonecliente">Telefone do cliente</string>
+    <string name="mesa">Mesa</string>
+    <string name="salvar">Salvar</string>
+    
+    <string-array name="spiCadastrarComandas">
+        <item>Selecione uma comanda:</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="spiMesa">
+        <item>Selecione uma mesa:</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 
 </resources>

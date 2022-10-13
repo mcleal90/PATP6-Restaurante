@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".CadastrarComanda">
 
     <TextView
-        android:id="@+id/txtLoginTitulo"
+        android:id="@+id/txtCadastrarComandasTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -18,14 +18,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/edUser"
 
-        android:text="@string/restaurante"
+        android:text="@string/cadastrarcomanda"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"/>
 
-    <EditText
-        android:id="@+id/edUser"
+    <Spinner
+        android:id="@+id/SpiComanda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -35,15 +34,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtLoginTitulo"
-        app:layout_constraintBottom_toTopOf="@id/edSenha"
+        app:layout_constraintTop_toBottomOf="@id/txtCadastrarComandasTitulo"
 
-        android:inputType="text"
-        android:hint="@string/user"
-        android:importantForAutofill="no" />
+        android:entries="@array/spiCadastrarComandas"
+        android:textAlignment="center"
+        />
 
     <EditText
-        android:id="@+id/edSenha"
+        android:id="@+id/edNomeCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -51,16 +49,50 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SpiComanda"
 
-        android:inputType="textPassword"
-        android:hint="@string/senha"
+        android:inputType="text"
+        android:hint="@string/nomecliente"
         android:importantForAutofill="no" />
 
+    <EditText
+        android:id="@+id/edTelefoneCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edNomeCliente"
+
+        android:inputType="text"
+        android:hint="@string/telefonecliente"
+        android:importantForAutofill="no" />
+
+    <Spinner
+        android:id="@+id/spiMesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edTelefoneCliente"
+
+        android:entries="@array/spiMesa"
+        android:textAlignment="center"
+        />
+
     <Button
-        android:id="@+id/btLogin"
+        android:id="@+id/btCadastrarComanda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -70,8 +102,10 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edSenha"
+        app:layout_constraintTop_toBottomOf="@id/spiMesa"
 
-        android:text="@string/login"/>
+        android:text="@string/salvar"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
