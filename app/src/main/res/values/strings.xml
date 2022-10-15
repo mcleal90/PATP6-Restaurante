@@ -4,17 +4,27 @@
     <string name="user">Digite o usuário</string>
     <string name="senha">Digite sua senha</string>
     <string name="login">Login</string>
+
     <string name="bemvindo">Bem vindo!</string>
     <string name="comandas">Comandas</string>
     <string name="cadastrarcomanda">Cadastrar Comanda</string>
     <string name="caixa">Caixa</string>
     <string name="admin">Administrador</string>
+
+    <string name="salvar">Salvar</string>
     <string name="sair">Sair</string>
+    <string name="voltar">Voltar</string>
+
     <string name="nomecliente">Nome do cliente</string>
     <string name="telefonecliente">Telefone do cliente</string>
     <string name="mesa">Mesa</string>
-    <string name="salvar">Salvar</string>
-    
+    <string name="adicionarpedido">Adicionar Pedido</string>
+    <string name="fecharpedido">Fechar Pedido</string>
+    <string name="exemplo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+
+    <string name="comentario">Comentário</string>
+    <string name="finalizar">Finalizar</string>
+
     <string-array name="spiCadastrarComandas">
         <item>Selecione uma comanda:</item>
         <item>1</item>

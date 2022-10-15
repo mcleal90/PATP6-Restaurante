@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Comandas">
+    tools:context=".Caixa">
 
     <TextView
-        android:id="@+id/txtComandasTitulo"
+        android:id="@+id/txtCaixaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -19,12 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:text="@string/comandas"
+        android:text="@string/caixa"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
     <Spinner
-        android:id="@+id/SpiComandas"
+        android:id="@+id/SpiCaixa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -34,29 +34,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtComandasTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtCaixaTitulo"
 
         android:entries="@array/spiCadastrarComandas"
         android:textAlignment="center"
         />
 
-    <Button
-        android:id="@+id/btCadastrarComanda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SpiComandas"
-
-        android:text="@string/adicionarpedido"/>
-
     <TextView
-        android:id="@+id/txtComandasExemplo"
+        android:id="@+id/txtCaixaExemplo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -66,14 +51,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCadastrarComanda"
+        app:layout_constraintTop_toBottomOf="@id/SpiCaixa"
 
         android:text="@string/exemplo"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/btFecharPedido"
+    <EditText
+        android:id="@+id/edCaixaComentario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -83,12 +68,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtComandasExemplo"
+        app:layout_constraintTop_toBottomOf="@id/txtCaixaExemplo"
 
-        android:text="@string/fecharpedido"/>
+        android:inputType="text"
+        android:hint="@string/comentario"
+        android:importantForAutofill="no"/>
 
     <Button
-        android:id="@+id/btComandasVoltar"
+        android:id="@+id/btCaixaVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -97,13 +84,13 @@
         android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btComandasSalvar"
-        app:layout_constraintTop_toBottomOf="@id/btFecharPedido"
+        app:layout_constraintEnd_toStartOf="@id/btCaixaFinalizar"
+        app:layout_constraintTop_toBottomOf="@id/edCaixaComentario"
 
         android:text="@string/voltar"/>
 
     <Button
-        android:id="@+id/btComandasSalvar"
+        android:id="@+id/btCaixaFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -111,10 +98,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toEndOf="@id/btComandasVoltar"
+        app:layout_constraintStart_toEndOf="@id/btCaixaVoltar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btFecharPedido"
+        app:layout_constraintTop_toBottomOf="@id/edCaixaComentario"
 
-        android:text="@string/salvar"/>
+        android:text="@string/finalizar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
