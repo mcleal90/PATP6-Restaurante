@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu">
+    tools:context=".Pedidos">
 
     <TextView
-        android:id="@+id/txtMenuTitulo"
+        android:id="@+id/txtPedidosTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -19,12 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:text="@string/bemvindo"
+        android:text="@string/pedidos"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/btCadastrarComanda"
+    <Spinner
+        android:id="@+id/SpiTipoPedidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -34,12 +34,31 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtMenuTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtPedidosTitulo"
 
-        android:text="@string/cadastrarcomanda"/>
+        android:entries="@array/spiTipoPedidos"
+        android:textAlignment="center"
+        />
 
-    <Button
-        android:id="@+id/btComandas"
+    <Spinner
+        android:id="@+id/SpiPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SpiTipoPedidos"
+
+        android:entries="@array/spiPedidos"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/edQuantidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -49,42 +68,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCadastrarComanda"
+        app:layout_constraintTop_toBottomOf="@id/SpiPedidos"
 
-        android:text="@string/comandas"/>
-
-    <Button
-        android:id="@+id/btCaixa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btComandas"
-
-        android:text="@string/caixa"/>
+        android:inputType="number"
+        android:hint="@string/quantidade"
+        android:importantForAutofill="no"/>
 
     <Button
-        android:id="@+id/btAdmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCaixa"
-
-        android:text="@string/admin"/>
-
-    <Button
-        android:id="@+id/btMenuSair"
+        android:id="@+id/btComandasVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -93,9 +84,27 @@
         android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAdmin"
+        app:layout_constraintEnd_toStartOf="@id/btComandasSalvar"
+        app:layout_constraintTop_toBottomOf="@id/edQuantidade"
 
-        android:text="@string/sair"/>
+        android:text="@string/voltar"/>
+
+    <Button
+        android:id="@+id/btComandasSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toEndOf="@id/btComandasVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edQuantidade"
+
+        android:text="@string/salvar"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

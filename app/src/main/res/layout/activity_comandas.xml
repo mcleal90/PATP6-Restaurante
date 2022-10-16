@@ -41,7 +41,7 @@
         />
 
     <Button
-        android:id="@+id/btCadastrarComanda"
+        android:id="@+id/btAdicionarPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -66,7 +66,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCadastrarComanda"
+        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
 
         android:text="@string/exemplo"
         android:textAlignment="center"

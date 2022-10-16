@@ -1,30 +1,39 @@
 <resources>
     <string name="app_name">PATP6-Restaurante</string>
+    <!--Login-->
     <string name="restaurante">Restaurante</string>
     <string name="user">Digite o usuário</string>
     <string name="senha">Digite sua senha</string>
     <string name="login">Login</string>
-
+    <!--Menu-->
     <string name="bemvindo">Bem vindo!</string>
     <string name="comandas">Comandas</string>
     <string name="cadastrarcomanda">Cadastrar Comanda</string>
     <string name="caixa">Caixa</string>
     <string name="admin">Administrador</string>
-
+    <!--Geral-->
     <string name="salvar">Salvar</string>
     <string name="sair">Sair</string>
     <string name="voltar">Voltar</string>
-
+    <!--Comandas-->
     <string name="nomecliente">Nome do cliente</string>
     <string name="telefonecliente">Telefone do cliente</string>
     <string name="mesa">Mesa</string>
     <string name="adicionarpedido">Adicionar Pedido</string>
     <string name="fecharpedido">Fechar Pedido</string>
     <string name="exemplo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
-
+    <!--Caixa-->
     <string name="comentario">Comentário</string>
     <string name="finalizar">Finalizar</string>
+    <!--Pedidos-->
+    <string name="pedidos">Pedidos</string>
+    <string name="quantidade">Quantidade</string>
+    <!--Administrador-->
+    <string name="novologin">Novo Login</string>
+    <string name="novocardapio">Novo Cardápio</string>
+    <string name="verificarcomandas">Verificar Comandas</string>
 
+    <!--Spinners-->
     <string-array name="spiCadastrarComandas">
         <item>Selecione uma comanda:</item>
         <item>1</item>
@@ -37,6 +46,26 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+    </string-array>
+
+    <string-array name="spiTipoPedidos">
+        <item>Cardápio:</item>
+        <item>Carnes</item>
+        <item>Pizzas</item>
+        <item>Lanches</item>
+        <item>Petiscos</item>
+        <item>Bebidas</item>
+        <item>Cervejas</item>
+        <item>Chopps</item>
+    </string-array>
+
+    <string-array name="spiPedidos">
+        <item>Selecione o pedido:</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
 
     <string-array name="spiMesa">

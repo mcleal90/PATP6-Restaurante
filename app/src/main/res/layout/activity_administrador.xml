@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu">
+    tools:context=".Administrador">
 
     <TextView
-        android:id="@+id/txtMenuTitulo"
+        android:id="@+id/txtAdminTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -19,12 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:text="@string/bemvindo"
+        android:text="@string/admin"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
     <Button
-        android:id="@+id/btCadastrarComanda"
+        android:id="@+id/btNovoLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -34,12 +34,12 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtMenuTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtAdminTitulo"
 
-        android:text="@string/cadastrarcomanda"/>
+        android:text="@string/novologin"/>
 
     <Button
-        android:id="@+id/btComandas"
+        android:id="@+id/btNovoCardapio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -49,12 +49,12 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCadastrarComanda"
+        app:layout_constraintTop_toBottomOf="@id/btNovoLogin"
 
-        android:text="@string/comandas"/>
+        android:text="@string/novocardapio"/>
 
     <Button
-        android:id="@+id/btCaixa"
+        android:id="@+id/btVerificarComandas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -64,27 +64,12 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btComandas"
+        app:layout_constraintTop_toBottomOf="@id/btNovoCardapio"
 
-        android:text="@string/caixa"/>
-
-    <Button
-        android:id="@+id/btAdmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCaixa"
-
-        android:text="@string/admin"/>
+        android:text="@string/verificarcomandas"/>
 
     <Button
-        android:id="@+id/btMenuSair"
+        android:id="@+id/btAdminSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -94,7 +79,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAdmin"
+        app:layout_constraintTop_toBottomOf="@id/btVerificarComandas"
 
         android:text="@string/sair"/>
 
