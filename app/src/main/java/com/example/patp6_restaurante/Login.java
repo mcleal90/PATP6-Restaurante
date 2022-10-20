@@ -35,31 +35,29 @@ public class Login extends AppCompatActivity {
             btLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    try {
-                        c = bancoDados.query("bdRestaurante", //tabela
-                                new String[]{"idlogin"},
-                                "user like ? and senha like ?",
-                                new String[]{edUser.getText().toString(), edSenha.getText().toString()},
-                                null,
-                                null,
-                                null,
-                                null);
-
-                        if (c.getCount()>0) {
-                            c.close();
-                            String idlogin = c.getString(0);
+//                    try {
+//                        c = bancoDados.query("bdRestaurante", //tabela
+//                                new String[]{"idlogin"},
+//                                "user like ? and senha like ?",
+//                                new String[]{edUser.getText().toString(), edSenha.getText().toString()},
+//                                null,
+//                                null,
+//                                null,
+//                                null);
+//
+//                        if (c.getCount()>0) {
+//                            c.close();
+//                            String idlogin = c.getString(0);
 //logou, abrir a proxima janela
                     Intent logarmenu = new Intent(getApplicationContext(),CadastrarComanda.class);
                     startActivity(logarmenu);
-                        } else {
-                            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Usuário não encontrado", "Erro", getApplicationContext());
-                            c.close();
-                        }
-
-
-                    } catch (Exception e) {
-
-                    }
+//                        } else {
+//                            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Usuário não encontrado", "Erro", getApplicationContext());
+//                            c.close();
+//                        }
+//                    } catch (Exception e) {
+//                        FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Erro de BD:" + e.getMessage(), "Erro", getApplicationContext());
+//                    }
 
                 }
             });
