@@ -45,19 +45,6 @@ public class CadastrarComanda extends AppCompatActivity {
         });
     }
 
-    //funcao caixa de texto
-    private void mostraCxTexto(String msg, String titulo) {
-//Gera uma caixa de texto na tela com um bot�o
-        //"OK"
-        AlertDialog.Builder builder = new
-                AlertDialog.Builder(this);
-        builder.setMessage(msg);
-        builder.setNeutralButton("OK", null);
-        AlertDialog dialog = builder.create();
-        dialog.setTitle(titulo);
-        dialog.show();
-    }
-
     private void SalvaComanda() {
         //Salva cadastro da comanda
         try {
@@ -71,6 +58,8 @@ public class CadastrarComanda extends AppCompatActivity {
                     edTelefoneCliente.getText().toString() + "','" +
                     edMesa.getText().toString() + "')");
 
+            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto ("Inserindo BD. Mensagem: Salvo! ", "Sucesso!", this);
+
             btCadComandaSalvar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -79,8 +68,7 @@ public class CadastrarComanda extends AppCompatActivity {
                 }
             });
         } catch (Exception e) {
-            mostraCxTexto("Inserindo BD. Mensagem: " +
-                    e.getMessage(), "ERRO");
+            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto ("Inserindo BD. Mensagem: " + e.getMessage(), "ERRO", this);
         }
     }
 }

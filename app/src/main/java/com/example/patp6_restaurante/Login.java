@@ -3,7 +3,9 @@ package com.example.patp6_restaurante;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ public class Login extends AppCompatActivity {
         EditText edUser, edSenha;
         Button btLogin;
         private SQLiteDatabase bancoDados;
+        Cursor c;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -32,24 +35,35 @@ public class Login extends AppCompatActivity {
             btLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    try {
+                        c = bancoDados.query("bdRestaurante", //tabela
+                                new String[]{"idlogin"},
+                                "user like ? and senha like ?",
+                                new String[]{edUser.getText().toString(), edSenha.getText().toString()},
+                                null,
+                                null,
+                                null,
+                                null);
+
+                        if (c.getCount()>0) {
+                            c.close();
+                            String idlogin = c.getString(0);
+//logou, abrir a proxima janela
                     Intent logarmenu = new Intent(getApplicationContext(),CadastrarComanda.class);
                     startActivity(logarmenu);
+                        } else {
+                            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Usuário não encontrado", "Erro", getApplicationContext());
+                            c.close();
+                        }
+
+
+                    } catch (Exception e) {
+
+                    }
+
                 }
             });
         }
-
-//funcao caixa de texto
-    private void mostraCxTexto(String msg, String titulo) {
-//Gera uma caixa de texto na tela com um bot�o
-        //"OK"
-        AlertDialog.Builder builder = new
-                AlertDialog.Builder(this);
-        builder.setMessage(msg);
-        builder.setNeutralButton("OK", null);
-        AlertDialog dialog = builder.create();
-        dialog.setTitle(titulo);
-        dialog.show();
-    }
 
     private void criarBancoDados() {
             try {
@@ -58,6 +72,7 @@ public class Login extends AppCompatActivity {
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS comanda(numero INTEGER PRIMARY KEY, situacao INTEGER)");
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pedido(idpedido INTEGER PRIMARY KEY AUTOINCREMENT, numero_com INTEGER, mesa INTEGER, cliente VARCHAR, telefone VARCHAR)");
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS cardapio(idcardapio INTEGER PRIMARY KEY AUTOINCREMENT, descricao VARCHAR, valor VARCHAR)");
+                bancoDados.execSQL("INSERT OR REPLACE INTO login (user, senha) VALUES ('admin', 'admin')");
                 bancoDados.close();
             } catch (Exception e) {
                 e.printStackTrace();
