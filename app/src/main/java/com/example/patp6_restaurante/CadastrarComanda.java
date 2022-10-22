@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 public class CadastrarComanda extends AppCompatActivity {
     EditText edComanda,edNomeCliente,edTelefoneCliente,edMesa;
-    Button btCadComandaVoltar,btCadComandaSalvar;
+    Button btCadComandaVoltar,btCadComandaSalvar,btCadComandaCom;
     SQLiteDatabase bancoDados;
 
     @Override
@@ -27,6 +27,7 @@ public class CadastrarComanda extends AppCompatActivity {
         edMesa = findViewById(R.id.edMesa);
         btCadComandaSalvar=findViewById(R.id.btCadComandaSalvar);
         btCadComandaVoltar=findViewById(R.id.btCadComandaVoltar);
+        btCadComandaCom=findViewById(R.id.btCadComandaCom);
 //Banco de dados
         bancoDados = openOrCreateDatabase("bdRestaurante",MODE_PRIVATE,null);
 //botao voltar para o menu
@@ -34,6 +35,14 @@ public class CadastrarComanda extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        //botao comandas
+        btCadComandaCom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent comandas = new Intent(getApplicationContext(),Comandas.class);
+                startActivity(comandas);
             }
         });
 //botao salvar

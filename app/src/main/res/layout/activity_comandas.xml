@@ -23,8 +23,8 @@
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <Spinner
-        android:id="@+id/SpiComandas"
+    <EditText
+        android:id="@+id/EdComandas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -36,8 +36,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtComandasTitulo"
 
-        android:entries="@array/spiCadastrarComandas"
-        android:textAlignment="center"
+        android:hint="@string/comandas"
+        />
+
+    <EditText
+        android:id="@+id/EdItemCardapio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EdComandas"
+
+        android:hint="@string/cardapio"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/edQuantidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EdItemCardapio"
+
+        android:hint="@string/quantidade"
+        android:text="1"
+        android:inputType="number"
         />
 
     <Button
@@ -51,11 +85,11 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SpiComandas"
+        app:layout_constraintTop_toBottomOf="@id/edQuantidade"
 
         android:text="@string/adicionarpedido"/>
 
-    <TextView
+    <LinearLayout
         android:id="@+id/txtComandasExemplo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,10 +101,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+        android:background="#aaa"
 
-        android:text="@string/exemplo"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:orientation="vertical" />
 
     <Button
         android:id="@+id/btFecharPedido"
