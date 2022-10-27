@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtMenuTitulo"
 
-        android:text="@string/cadastrarcomanda"/>
+        android:text="@string/novacomanda"/>
 
     <Button
         android:id="@+id/btComandas"

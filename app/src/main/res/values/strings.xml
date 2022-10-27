@@ -8,13 +8,16 @@
     <!--Menu-->
     <string name="bemvindo">Bem vindo!</string>
     <string name="comandas">Comandas</string>
-    <string name="cadastrarcomanda">Cadastrar Comanda</string>
+    <string name="novacomanda">Nova Comanda</string>
     <string name="caixa">Caixa</string>
     <string name="admin">Administrador</string>
     <!--Geral-->
     <string name="salvar">Salvar</string>
     <string name="sair">Sair</string>
     <string name="voltar">Voltar</string>
+    <string name="nova">Nova</string>
+    <string name="ver">Ver</string>
+    <string name="mais">+</string>
     <!--Comandas-->
     <string name="nomecliente">Nome do cliente</string>
     <string name="telefonecliente">Telefone do cliente</string>
@@ -22,6 +25,7 @@
     <string name="cardapio">Cardápio</string>
     <string name="adicionarpedido">Adicionar Pedido</string>
     <string name="fecharpedido">Fechar Pedido</string>
+    <string name="vercomanda">Ver Comanda</string>
     <string name="exemplo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
     <!--Caixa-->
     <string name="comentario">Comentário</string>

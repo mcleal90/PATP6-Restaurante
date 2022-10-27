@@ -68,7 +68,8 @@ public class Login extends AppCompatActivity {
                 bancoDados = openOrCreateDatabase("bdRestaurante",MODE_PRIVATE,null);
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS login(idlogin INTEGER PRIMARY KEY AUTOINCREMENT, user VARCHAR, senha VARCHAR)");
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS comanda(numero INTEGER PRIMARY KEY, situacao INTEGER)");
-                bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pedido(idpedido INTEGER PRIMARY KEY AUTOINCREMENT, numero_com INTEGER, mesa INTEGER, cliente VARCHAR, telefone VARCHAR)");
+                bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pedido(idpedido INTEGER PRIMARY KEY AUTOINCREMENT, numero_com INTEGER, mesa INTEGER, cliente VARCHAR, telefone VARCHAR, FOREIGN KEY(numero_com) REFERENCES comanda(numero))");
+                bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pedido_item(idpedido_item INTEGER PRIMARY KEY AUTOINCREMENT, idpedido_pitem INTEGER, idcardapio_pitem INTEGER, quantidade VARCHAR, FOREIGN KEY(idpedido_pitem) REFERENCES pedido(idpedido),FOREIGN KEY(idcardapio_pitem) REFERENCES cardapio(idcardapio)) ");
                 bancoDados.execSQL("CREATE TABLE IF NOT EXISTS cardapio(idcardapio INTEGER PRIMARY KEY AUTOINCREMENT, descricao VARCHAR, valor VARCHAR)");
                 bancoDados.execSQL("INSERT OR REPLACE INTO login (user, senha) VALUES ('admin', 'admin')");
                 bancoDados.close();

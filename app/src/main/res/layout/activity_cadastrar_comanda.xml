@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:text="@string/cadastrarcomanda"
+        android:text="@string/novacomanda"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@id/txtCadastrarComandasTitulo"
 
         android:inputType="text"
-        android:hint="@string/cadastrarcomanda"
+        android:hint="@string/novacomanda"
         android:importantForAutofill="no" />
 
     <EditText
