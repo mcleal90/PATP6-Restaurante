@@ -100,7 +100,7 @@
 
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,33 +109,18 @@
         android:text="@string/mais"/>
 
     <Button
-        android:id="@+id/btComandasVoltar"
+        android:id="@+id/btNovaComanda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
 
         android:text="@string/nova"/>
-
-    <Button
-        android:id="@+id/btComandasVer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-
-        app:layout_constraintStart_toEndOf="btComandasVoltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
-
-        android:text="@string/ver"/>
 
     <Button
         android:id="@+id/btFecharPedido"
@@ -144,12 +129,27 @@
 
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btComandasVoltar"
+        app:layout_constraintStart_toEndOf="@+id/btNovaComanda"
+        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
 
         android:text="@string/fecharpedido"/>
+
+    <Button
+        android:id="@+id/btComandasVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toEndOf="@+id/btFecharPedido"
+        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+
+        android:text="@string/ver"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
