@@ -3,14 +3,16 @@ package com.example.patp6_restaurante;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class Comandas extends AppCompatActivity {
-    EditText edComandas,EdItemCardapio,edQuantidade;
+    EditText edComandas, edItemCardapio,edQuantidade;
     Button btAdicionarPedido, btNovaComanda,btComandasVer,btFecharPedido;
+    private SQLiteDatabase bancoDados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,23 @@ public class Comandas extends AppCompatActivity {
     }
 
     private void adicionarPedido() {
-        //adiciona à tabela pedido as informações: idcardápio_ped = edItemCardapio + quantidade = edQuantidade ONDE idcliente_ped = edComandas
+        //adiciona à tabela pedido as informações: idcardapio_ped = edItemCardapio + quantidade = edQuantidade ONDE idcliente_ped = edComandas
+        try {
+            //abre banco
+            bancoDados = openOrCreateDatabase("bdRestaurante",MODE_PRIVATE,null);
+
+            String comanda = edComandas.getText().toString();
+            String cardapio = edItemCardapio.getText().toString();
+            String quantidade = edQuantidade.getText().toString();
+
+            bancoDados.execSQL("INSERT INTO pedido (idcardapio_ped, quantidade, idcliente_ped) VALUES ('" +
+                    cardapio + "', '" +
+                    quantidade + "', '" +
+                    comanda +"') ");
+            
+        }catch (Exception e) {
+                e.printStackTrace();
+        }
+        
     }
 }

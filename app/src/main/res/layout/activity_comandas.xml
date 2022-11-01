@@ -41,7 +41,7 @@
         />
 
     <EditText
-        android:id="@+id/EdItemCardapio"
+        android:id="@+id/edItemCardapio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -68,7 +68,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EdItemCardapio"
+        app:layout_constraintTop_toBottomOf="@+id/edItemCardapio"
 
         android:text="@string/quantidade"
         android:textAlignment="center"
