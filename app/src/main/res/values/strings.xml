@@ -37,6 +37,8 @@
     <string name="novologin">Novo Login</string>
     <string name="novocardapio">Novo Cardápio</string>
     <string name="verificarcomandas">Verificar Comandas</string>
+<!--    Alerta-->
+    <string name="senhaincorreta">Login ou Senha incorreta!</string>
 
     <!--Spinners-->
     <string-array name="spiCadastrarComandas">

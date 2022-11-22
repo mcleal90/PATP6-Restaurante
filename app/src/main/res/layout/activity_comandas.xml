@@ -23,7 +23,7 @@
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <EditText
+    <Spinner
         android:id="@+id/EdComandas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtComandasTitulo"
 
-        android:hint="@string/comandas"
+        android:entries="@array/spiCadastrarComandas"
         android:inputType="number"
         />
 

@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class Comandas extends AppCompatActivity {
-    EditText edComandas, edItemCardapio,edQuantidade;
+    EditText edItemCardapio,edQuantidade;
+    Spinner edComandas;
     Button btAdicionarPedido, btNovaComanda,btComandasVer,btFecharPedido;
     private SQLiteDatabase bancoDados;
 
@@ -18,6 +20,7 @@ public class Comandas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comandas);
+
 
         btNovaComanda = findViewById(R.id.btNovaComanda);
         btComandasVer = findViewById(R.id.btComandasVer);
@@ -60,29 +63,12 @@ public class Comandas extends AppCompatActivity {
     }
 
 //funções
-
     private void fecharPedido() {
         //altera a situação da comanda (1=livre,2=uso,3=fechada)
     }
 
     private void adicionarPedido() {
-        //adiciona à tabela pedido as informações: idcardapio_ped = edItemCardapio + quantidade = edQuantidade ONDE idcliente_ped = edComandas
-        try {
-            //abre banco
-            bancoDados = openOrCreateDatabase("bdRestaurante",MODE_PRIVATE,null);
-
-            String comanda = edComandas.getText().toString();
-            String cardapio = edItemCardapio.getText().toString();
-            String quantidade = edQuantidade.getText().toString();
-
-            bancoDados.execSQL("INSERT INTO pedido (idcardapio_ped, quantidade, idcliente_ped) VALUES ('" +
-                    cardapio + "', '" +
-                    quantidade + "', '" +
-                    comanda +"') ");
-            
-        }catch (Exception e) {
-                e.printStackTrace();
-        }
+        FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Pedido adicionado!","Sucesso!",Comandas.this);
+    }
         
     }
-}

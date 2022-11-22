@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
         EditText edUser, edSenha;
@@ -32,33 +33,21 @@ public class Login extends AppCompatActivity {
             criarBancoDados();
 
 //clique botao logar - abrir menu mas falta verificar autenticação
+
             btLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    try {
-//                        c = bancoDados.query("bdRestaurante", //tabela
-//                                new String[]{"idlogin"},
-//                                "user like ? and senha like ?",
-//                                new String[]{edUser.getText().toString(), edSenha.getText().toString()},
-//                                null,
-//                                null,
-//                                null,
-//                                null);
-//
-//                        if (c.getCount()>0) {
-//                            c.close();
-//                            String idlogin = c.getString(0);
-//logou, abrir a proxima janela
-                    Intent logarmenu = new Intent(getApplicationContext(),CadastrarComanda.class);
-                    startActivity(logarmenu);
-//                        } else {
-//                            FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Usuário não encontrado", "Erro", getApplicationContext());
-//                            c.close();
-//                        }
-//                    } catch (Exception e) {
-//                        FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Erro de BD:" + e.getMessage(), "Erro", getApplicationContext());
-//                    }
 
+                    String strUser = edUser.getText().toString();
+                    String strSenha = edSenha.getText().toString();
+
+                    if ((strUser.equals("admin")) && (strSenha.equals("admin"))) {
+//logou, abrir a proxima janela
+                    Intent logarmenu = new Intent(getApplicationContext(),Menu.class);
+                    startActivity(logarmenu);
+                    } else {
+                        FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Usuário ou senha incorretos!", "Erro", Login.this);
+                    }
                 }
             });
         }
