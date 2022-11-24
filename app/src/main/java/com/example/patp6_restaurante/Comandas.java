@@ -3,29 +3,23 @@ package com.example.patp6_restaurante;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 
 public class Comandas extends AppCompatActivity {
-    EditText edItemCardapio,edQuantidade;
-    Spinner edComandas;
-    Button btAdicionarPedido, btNovaComanda,btComandasVer,btFecharPedido;
-    private SQLiteDatabase bancoDados;
+    Button btAdicionarPedido, btVoltarCom,btComandasVer,btNovaComanda, btFecharComanda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comandas);
 
-
-        btNovaComanda = findViewById(R.id.btNovaComanda);
+        btAdicionarPedido = findViewById(R.id.btAdicionarPedido);
+        btVoltarCom = findViewById(R.id.btVoltarCom);
         btComandasVer = findViewById(R.id.btComandasVer);
-        btFecharPedido = findViewById(R.id.btFecharPedido);
-
+        btFecharComanda = findViewById(R.id.btFecharComanda);
+        btNovaComanda = findViewById(R.id.btNovaComanda);
 
 //botao adicionar pedido
         btAdicionarPedido.setOnClickListener(new View.OnClickListener() {
@@ -44,11 +38,20 @@ public class Comandas extends AppCompatActivity {
             }
         });
 
+//botao voltar
+        btVoltarCom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent voltar = new Intent(getApplicationContext(),Menu.class);
+                startActivity(voltar);
+            }
+        });
+
 //botao fechar pedido
-    btFecharPedido.setOnClickListener(new View.OnClickListener() {
+    btFecharComanda.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            fecharPedido();
+            fecharComanda();
         }
     });
 
@@ -63,8 +66,9 @@ public class Comandas extends AppCompatActivity {
     }
 
 //funções
-    private void fecharPedido() {
+    private void fecharComanda() {
         //altera a situação da comanda (1=livre,2=uso,3=fechada)
+        FuncaoMostraCaixaTexto msg = new FuncaoMostraCaixaTexto("Comanda fechada!","Sucesso!",Comandas.this);
     }
 
     private void adicionarPedido() {

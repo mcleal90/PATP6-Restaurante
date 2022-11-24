@@ -24,7 +24,7 @@
         android:textSize="20sp"/>
 
     <Spinner
-        android:id="@+id/EdComandas"
+        android:id="@+id/SpiComandas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -51,7 +51,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/EdComandas"
+        app:layout_constraintTop_toBottomOf="@id/SpiComandas"
 
         android:hint="@string/cardapio"
         android:inputType="number"
@@ -109,7 +109,21 @@
         android:text="@string/mais"/>
 
     <Button
-        android:id="@+id/btNovaComanda"
+        android:id="@+id/btFecharComanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toEndOf="@+id/btVoltarCom"
+        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+
+        android:text="@string/fecharcomanda"/>
+
+    <Button
+        android:id="@+id/btVoltarCom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -118,12 +132,12 @@
         android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+        app:layout_constraintTop_toBottomOf="@id/btFecharComanda"
 
-        android:text="@string/nova"/>
+        android:text="@string/voltar"/>
 
     <Button
-        android:id="@+id/btFecharPedido"
+        android:id="@+id/btNovaComanda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -131,10 +145,11 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toEndOf="@+id/btNovaComanda"
-        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+        app:layout_constraintStart_toEndOf="@id/btVoltarCom"
+        app:layout_constraintEnd_toStartOf="@id/btComandasVer"
+        app:layout_constraintTop_toBottomOf="@id/btFecharComanda"
 
-        android:text="@string/fecharpedido"/>
+        android:text="@string/nova"/>
 
     <Button
         android:id="@+id/btComandasVer"
@@ -145,8 +160,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toEndOf="@+id/btFecharPedido"
-        app:layout_constraintTop_toBottomOf="@id/btAdicionarPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btFecharComanda"
 
         android:text="@string/ver"/>
 

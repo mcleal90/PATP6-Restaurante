@@ -7,7 +7,7 @@
     tools:context=".CadastrarComanda">
 
     <TextView
-        android:id="@+id/txtCadastrarComandasTitulo"
+        android:id="@+id/txtAdminLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -23,25 +23,8 @@
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-<!--    <Spinner-->
-<!--        android:id="@+id/SpiCriarComanda"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginTop="32dp"-->
-
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/txtCadastrarComandasTitulo"-->
-
-<!--        android:entries="@array/spiCadastrarComandas"-->
-<!--        android:textAlignment="center"-->
-<!--        />-->
-
-    <EditText
-        android:id="@+id/edComanda"
+    <Spinner
+        android:id="@+id/spiComanda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -51,14 +34,12 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtCadastrarComandasTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtAdminLogin"
 
-        android:inputType="text"
-        android:hint="@string/novacomanda"
-        android:importantForAutofill="no" />
+        android:entries="@array/spiCadastrarComandas"/>
 
     <EditText
-        android:id="@+id/edNomeCliente"
+        android:id="@+id/edCardapioAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -68,14 +49,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edComanda"
+        app:layout_constraintTop_toBottomOf="@id/spiComanda"
 
         android:inputType="text"
         android:hint="@string/nomecliente"
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/edTelefoneCliente"
+        android:id="@+id/edDescricaoAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -85,31 +66,14 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edNomeCliente"
+        app:layout_constraintTop_toBottomOf="@id/edCardapioAdmin"
 
-        android:inputType="text"
+        android:inputType="phone"
         android:hint="@string/telefonecliente"
         android:importantForAutofill="no" />
 
-<!--    <Spinner-->
-<!--        android:id="@+id/spiMesa"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:layout_marginTop="16dp"-->
-
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/edTelefoneCliente"-->
-
-<!--        android:entries="@array/spiMesa"-->
-<!--        android:textAlignment="center"-->
-<!--        />-->
-
-    <EditText
-        android:id="@+id/edMesa"
+    <Spinner
+        android:id="@+id/edValorAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -119,14 +83,12 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edTelefoneCliente"
+        app:layout_constraintTop_toBottomOf="@id/edDescricaoAdmin"
 
-        android:inputType="text"
-        android:hint="@string/mesa"
-        android:importantForAutofill="no" />
+        android:entries="@array/spiMesa"/>
 
     <Button
-        android:id="@+id/btCadComandaVoltar"
+        android:id="@+id/btCardapioVoltarAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -136,7 +98,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btCadComandaCom"
-        app:layout_constraintTop_toBottomOf="@id/edMesa"
+        app:layout_constraintTop_toBottomOf="@id/edValorAdmin"
 
         android:text="@string/voltar"/>
 
@@ -149,14 +111,14 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toEndOf="@id/btCadComandaVoltar"
-        app:layout_constraintEnd_toStartOf="@id/btCadComandaSalvar"
-        app:layout_constraintTop_toBottomOf="@id/edMesa"
+        app:layout_constraintStart_toEndOf="@id/btCardapioVoltarAdmin"
+        app:layout_constraintEnd_toStartOf="@id/btCardapioSalvarAdmin"
+        app:layout_constraintTop_toBottomOf="@id/edValorAdmin"
 
         android:text="@string/comandas"/>
 
     <Button
-        android:id="@+id/btCadComandaSalvar"
+        android:id="@+id/btCardapioSalvarAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -166,7 +128,7 @@
 
         app:layout_constraintStart_toEndOf="@id/btCadComandaCom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edMesa"
+        app:layout_constraintTop_toBottomOf="@id/edValorAdmin"
 
         android:text="@string/salvar"/>
 

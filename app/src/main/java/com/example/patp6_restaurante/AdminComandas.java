@@ -7,20 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Pedidos extends AppCompatActivity {
-    Button btVoltarPed;
+public class AdminComandas extends AppCompatActivity {
+    Button btComandasVoltarAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pedidos);
+        setContentView(R.layout.activity_admin_comandas);
 
-        btVoltarPed = findViewById(R.id.btComandasVoltarAdmin);
+        btComandasVoltarAdmin = findViewById(R.id.btComandasVoltarAdmin);
 
-        btVoltarPed.setOnClickListener(new View.OnClickListener() {
+        btComandasVoltarAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent voltar = new Intent(getApplicationContext(),Comandas.class);
+                Intent voltar = new Intent(getApplicationContext(),Administrador.class);
                 startActivity(voltar);
             }
         });

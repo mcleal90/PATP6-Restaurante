@@ -24,7 +24,7 @@
     <string name="mesa">Mesa</string>
     <string name="cardapio">Cardápio</string>
     <string name="adicionarpedido">Adicionar Pedido</string>
-    <string name="fecharpedido">Fechar Pedido</string>
+    <string name="fecharcomanda">Fechar Comanda</string>
     <string name="vercomanda">Ver Comanda</string>
     <string name="exemplo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
     <!--Caixa-->
@@ -37,7 +37,10 @@
     <string name="novologin">Novo Login</string>
     <string name="novocardapio">Novo Cardápio</string>
     <string name="verificarcomandas">Verificar Comandas</string>
-<!--    Alerta-->
+    <string name="numerocomanda">Número da Comanda</string>
+    <string name="descricao">Descrição do item</string>
+    <string name="valor">Digite o valor</string>
+    <!--    Alerta-->
     <string name="senhaincorreta">Login ou Senha incorreta!</string>
 
     <!--Spinners-->
@@ -82,11 +85,34 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+    </string-array>
+
+    <string-array name="spiFuncao">
+        <item>Selecione uma função:</item>
+        <item>1:Garçom</item>
+        <item>2:Caixa</item>
+        <item>3:Administrador</item>
+    </string-array>
+
+    <!--List Views-->
+    <string-array name="lvPedidos">
+        <item>1: Cachorro Quente: R$ 15,00</item>
+        <item>2: Batata Frita: R$12,00</item>
+        <item>3: Coca Cola 2L: R$10,00</item>
+    </string-array>
+
+    <string-array name="lvTotal">
+        <item>TOTAL: R$37,00</item>
+    </string-array>
+
+
+    <string-array name="lvAdminComandas">
+        <item>Comanda 1: Carlos Eduardo</item>
+        <item>Comanda 2: Rafael Nogueira</item>
+        <item>Comanda 3: Carla Ribeiro</item>
+        <item>Comanda 4: Matheus Silva</item>
+        <item>Comanda 5: Luciane Vasconcelos</item>
+        <item>Comanda 6: Gabriel Junior</item>
     </string-array>
 
 </resources>

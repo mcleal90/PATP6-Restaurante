@@ -55,7 +55,8 @@ public class Menu extends AppCompatActivity {
         btMenuSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent voltar = new Intent(getApplicationContext(),Login.class);
+                startActivity(voltar);
             }
         });
     }

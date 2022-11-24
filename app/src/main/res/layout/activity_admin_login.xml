@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Caixa">
+    tools:context=".AdminLogin">
 
     <TextView
-        android:id="@+id/txtCaixaTitulo"
+        android:id="@+id/txtAdminLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -19,80 +19,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:text="@string/caixa"
+        android:text="@string/novologin"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <Spinner
-        android:id="@+id/spiComandaCaixa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtCaixaTitulo"
-
-        android:entries="@array/spiCadastrarComandas"
-        android:textAlignment="center"
-        />
-
-    <ListView
-        android:id="@+id/lvPedidosPed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spiComandaCaixa"
-
-        android:entries="@array/lvPedidos"
-        />
-
-    <ListView
-        android:id="@+id/lvTotalPed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lvPedidosPed"
-
-        android:entries="@array/lvTotal"
-        />
-
     <EditText
-        android:id="@+id/edCaixaComentario"
+        android:id="@+id/edCardapioAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
 
-        android:hint="@string/comentario"
-        android:importantForAutofill="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAdminLogin"
 
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvTotalPed"
+        android:hint="@string/user"
+        android:importantForAutofill="no" />
 
-        />
+    <EditText
+        android:id="@+id/edDescricaoAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edCardapioAdmin"
+
+        android:inputType="phone"
+        android:hint="@string/telefonecliente"
+        android:importantForAutofill="no" />
+
+    <Spinner
+        android:id="@+id/edValorAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edDescricaoAdmin"
+
+        android:entries="@array/spiFuncao"/>
 
     <Button
-        android:id="@+id/btCaixaVoltar"
+        android:id="@+id/btCardapioVoltarAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -101,13 +82,12 @@
         android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btCaixaFinalizar"
-        app:layout_constraintTop_toBottomOf="@id/edCaixaComentario"
+        app:layout_constraintTop_toBottomOf="@id/edValorAdmin"
 
         android:text="@string/voltar"/>
 
     <Button
-        android:id="@+id/btCaixaFinalizar"
+        android:id="@+id/btCardapioSalvarAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -115,10 +95,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
 
-        app:layout_constraintStart_toEndOf="@id/btCaixaVoltar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edCaixaComentario"
+        app:layout_constraintTop_toBottomOf="@id/edValorAdmin"
 
-        android:text="@string/finalizar"/>
+        android:text="@string/salvar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
