@@ -56,7 +56,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/edDescricaoAdmin"
+        android:id="@+id/edSenhaAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -83,7 +83,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edDescricaoAdmin"
+        app:layout_constraintTop_toBottomOf="@id/edSenhaAdmin"
 
         android:entries="@array/spiMesa"/>
 

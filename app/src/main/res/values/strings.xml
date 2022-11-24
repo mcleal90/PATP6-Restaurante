@@ -40,6 +40,8 @@
     <string name="numerocomanda">Número da Comanda</string>
     <string name="descricao">Descrição do item</string>
     <string name="valor">Digite o valor</string>
+    <string name="confirmasenha">Confirme a senha</string>
+
     <!--    Alerta-->
     <string name="senhaincorreta">Login ou Senha incorreta!</string>
 

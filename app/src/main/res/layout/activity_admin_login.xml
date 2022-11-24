@@ -41,7 +41,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/edDescricaoAdmin"
+        android:id="@+id/edSenhaAdmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -53,8 +53,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edCardapioAdmin"
 
-        android:inputType="phone"
-        android:hint="@string/telefonecliente"
+        android:inputType="textPassword"
+        android:hint="@string/senha"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/edConfirmaSenhaAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edSenhaAdmin"
+
+        android:inputType="textPassword"
+        android:hint="@string/confirmasenha"
         android:importantForAutofill="no" />
 
     <Spinner
@@ -68,7 +85,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edDescricaoAdmin"
+        app:layout_constraintTop_toBottomOf="@id/edConfirmaSenhaAdmin"
 
         android:entries="@array/spiFuncao"/>
 

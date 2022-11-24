@@ -24,7 +24,7 @@ public class CadastrarComanda extends AppCompatActivity {
 //identificacao de elementos
         spiComanda = findViewById(R.id.spiComanda);
         edNomeCliente = findViewById(R.id.edCardapioAdmin);
-        edTelefoneCliente = findViewById(R.id.edDescricaoAdmin);
+        edTelefoneCliente = findViewById(R.id.edSenhaAdmin);
         spiMesa = findViewById(R.id.edValorAdmin);
         btCadComandaSalvar=findViewById(R.id.btCardapioSalvarAdmin);
         btCadComandaVoltar=findViewById(R.id.btCardapioVoltarAdmin);
